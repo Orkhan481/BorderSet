@@ -1,38 +1,311 @@
-.App {
+:root{
+  --primary:#fff;
+  --secondary:#dedede;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+.app{
+  display: flex;
+}
+/* NAVBAR START */
+.navbar{
+  width: 20%;
+  height: 100vh;
+  background-color:var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between ;
+  padding: 20px 25px;
+  position: relative;
+}
+nav >h1::first-letter{
+  font-size: 40px;
+}
+nav >h1{
+  font-size: 22px;
+}
+nav ul{
+  margin:25px 0;
+}
+nav .link{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:10px 0;
+  padding: 10px 0;
+}
+nav .link h1{
+  font-size: 18px;
+}
+nav .link i{
+  margin:0 8px;
+}
+
+
+.premium{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color:var(--secondary);
+  padding: 15px;
+  border-radius: 25px;
+}
+.premium p{
   text-align: center;
 }
+.premium button{
+  padding: 12px 20px;
+  background-color: blueviolet;
+  color:white;
+  border-radius: 25px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* NAVBAR FINISH */
+/* TEACHERS START */
+.teachers{
+  width:25%;
+  height:100%;
+  background-color: var(--primary);
+  padding: 15px;
 }
+.teacher-banner{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 0 15px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.teacher-banner .left{
+  display: flex;
+  align-items: center;
+}
+.teacher-banner .left i{
+  margin:0 12px;
+}
+.teacher-banner i{
+  font-size: 22px;
+}
+.teacher-info{
+  padding: 0 10px;
+}
+.teacher-info h3{
+  margin:15px 0;
+}
+.teacher-info .more{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:15px 0;
+}
+.teacher-info .more i{
+  margin:5px 0;
+}
+.success {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.success .cards{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.success .card{
+  width: 25%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border:#dedede;
+  border-radius: 15px;
+  background-color:var(--secondary);
+}
+.success .card i{
+  font-size: 22px;
+}
+.materials h3{
+  margin:10px 0;
+}
+.material-info{
+  width: 100%;
+  height: calc(100vh -220px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+}
+.material-info .card{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin:15px 0;
+  border-radius: 15px;
+  background-color: var(--secondary);
+}
+.material-info .card i{
+  font-size: 22px;
+}
+.material-info .number{
+  padding: 8px 12px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.material-info h4{
+  font-size: 20px;
+}
+/* TEACHERS FINISH */
+/* LESSONS START */
+.lessons{
+  width: 55%;
+  height: 100%;
+  padding: 15px;
+}
+.lessons .video{
+  width: 100%;
+  height: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lessons .video img{
+  width: 600px;
+  height: 400px;
+}
+.chat-student{
+  width: 100%;
+  height:100%;
+  display: flex;
+}
+.chat{
+  width: 45%;
+  background-color: var(--primary);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin:10px;
+}
+.chat .card{
+  padding: 10px 15px;
+  background-color: var(--secondary);
+}
+.chat h3{
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.chat .chat-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin:10px 0;
+  padding: 5px 10px;
+  background-color: var(--primary);
+  border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.chat .chat-item p{
+  margin:5px 0;
+}
+.chat .chat-item:nth-child(2){
+  width: 100%;
+text-align: right;
+justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat .chat-item i{
+  font-size: 24px;
+margin:5px 12px;
 }
+.chat .input-area{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+.chat .input-area input{
+  width: 90%;
+  height: 30px;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+}
+.chat .input-area i{
+  font-size: 22px;
+}
+.students{
+  width: 50%;
+  margin: 10px;
+}
+.students .title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.students .title h3{
+  font-size: 22px;
+    margin: 10px 0;
+
+}
+.students .title button{
+  background-color: red;
+  padding: 8px 12px;
+}
+.students .title button i{
+  margin: 0 5px;
+}
+.students-info{
+  width: 100%;
+  height: calc(100vh -220px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+}
+.students-info .card{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin:15px 0;
+  border-radius: 15px;
+  background-color: var(--secondary);
+}
+.students-info .card .info{
+  display: flex;
+}
+.students-info .card .info i{
+  margin:0 10px;
+  font-size: 22px;
+}
+/* LESSONS FINISH */
+
+
+
+/* BTNS */
+
